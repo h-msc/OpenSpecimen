@@ -9,7 +9,7 @@
 
 # OpenSpecimen
 
-**OpenSpecimen** is an open-source, self-contained website template for creating interactive type specimens on the web. It’s designed for designers, type foundries, and developers who want a clear, modern way to showcase fonts—especially variable fonts—without a heavy framework.
+**OpenSpecimen** is an open-source, self-contained website template for creating interactive type specimens on the web. It’s designed for designers, type foundries, and developers who want a clear, modern way to showcase fonts (especially variable fonts) without a heavy framework and dependencies.
 
 ---
 
