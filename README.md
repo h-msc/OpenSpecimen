@@ -81,7 +81,7 @@ Adjust variable font axes (weight, width, etc.) using the sidebar sliders. The l
 Click any glyph to zoom in and see its Unicode codepoint. Use arrow keys to navigate between glyphs.
 4. Reset Axes
 Click the Reset button to return all axes and font size to default values.
-#### 5. Custom Fonts
+5. Custom Fonts
 5.1. Replace **Roboto-VariableFont_wdth,wght.ttf** in the **fonts/** folder with your font to showcase it.
 5.2. Open folder in VSCode on another code editor of choice and change:
 ``` bash
