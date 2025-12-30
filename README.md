@@ -45,10 +45,9 @@ Disclaimer: I'm not a programmer. This project was developed with significant co
 
 Check out the live demo here: [OpenSpecimen Demo](https://h-msc.github.io/OpenSpecimen/)
 
-Current typeface being displayed by default is [Roboto](https://fonts.google.com/specimen/Roboto) by Christian Robertson.
+<img width="6300" height="11875" alt="OpenSpecimen" src="https://github.com/user-attachments/assets/65d5b869-8655-48ed-a2c6-d3b7ebe17839" />
 
-![Demo Screenshot](https://user-images.githubusercontent.com/yourusername/demo-screenshot.png)  
-*Replace with an actual screenshot or GIF showing your interactive tester and glyph grid.*
+Current typeface being displayed by default is [Roboto](https://fonts.google.com/specimen/Roboto) by Christian Robertson.
 
 ---
 
@@ -73,3 +72,37 @@ git clone https://github.com/h-msc/OpenSpecimen.git
 3. Open index.html in a modern web browser.
 No additional dependencies are required; everything runs in-browser using [opentype.js](https://opentype.js.org)
 
+## Usage
+1. Type Tester
+Type any text in the interactive textarea to see it rendered in your chosen font.
+2. Axis Sliders
+Adjust variable font axes (weight, width, etc.) using the sidebar sliders. The live preview updates in real time.
+3. Glyph Grid
+Click any glyph to zoom in and see its Unicode codepoint. Use arrow keys to navigate between glyphs.
+4. Reset Axes
+Click the Reset button to return all axes and font size to default values.
+#### 5. Custom Fonts
+5.1. Replace **Roboto-VariableFont_wdth,wght.ttf** in the **fonts/** folder with your font to showcase it.
+5.2. Open folder in VSCode on another code editor of choice and change:
+``` bash
+const FONT_FILENAME = 'Roboto-VariableFont_wdth,wght.ttf';
+```
+5.3. Preview using livepreview on VSCode or another extension for your IDE of choice that allows local live preview
+
+## Contributing
+Contributions are welcome! You can help by:
+Reporting bugs or issues
+Suggesting features
+Submitting pull requests
+Please follow the standard [GitHub pull request workflow](https://docs.github.com/en/pull-requests).
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](License) file for details.
+
+## Ackowledgements
+- [opentype.js](https://opentype.js.org)
+- Font designers whose works are used in demos
+- Open-source community for inspiration and guidance, with focus on the incredile team at [Google Fonts](https://github.com/google/fonts), which I've become a huge fan of.
+
+---
+Thank you for exploring OpenSpecimen! Contributions and feedback are always welcome.
