@@ -45,7 +45,7 @@ Disclaimer: I'm not a programmer. This project was developed with significant co
 
 Check out the live demo here: [OpenSpecimen Demo](https://h-msc.github.io/OpenSpecimen/)
 
-<img width="6300" height="11875" alt="OpenSpecimen" src="https://github.com/user-attachments/assets/65d5b869-8655-48ed-a2c6-d3b7ebe17839" />
+<img width="6300" height="13929" alt="OpenSpecimen" src="https://github.com/user-attachments/assets/4f4d1061-9f4a-4818-a42e-c030b3f6c1cd" />
 
 Current typeface being displayed by default is [Roboto](https://fonts.google.com/specimen/Roboto) by Christian Robertson.
 
