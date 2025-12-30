@@ -82,12 +82,12 @@ Click any glyph to zoom in and see its Unicode codepoint. Use arrow keys to navi
 4. Reset Axes
 Click the Reset button to return all axes and font size to default values.
 5. Custom Fonts
-5.1. Replace **Roboto-VariableFont_wdth,wght.ttf** in the **fonts/** folder with your font to showcase it.
-5.2. Open folder in VSCode on another code editor of choice and change:
-``` bash
-const FONT_FILENAME = 'Roboto-VariableFont_wdth,wght.ttf';
-```
-5.3. Preview using livepreview on VSCode or another extension for your IDE of choice that allows local live preview
+   5.1. Replace **Roboto-VariableFont_wdth,wght.ttf** in the **fonts/** folder with your font to showcase it.
+   5.2. Open folder in VSCode on another code editor of choice and change:
+   ``` bash
+   const FONT_FILENAME = 'Roboto-VariableFont_wdth,wght.ttf';
+   ```
+   5.3. Preview using livepreview on VSCode or another extension for your IDE of choice that allows local live preview
 
 ## Contributing
 Contributions are welcome! You can help by:
