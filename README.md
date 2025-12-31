@@ -102,7 +102,7 @@ Please follow the standard [GitHub pull request workflow](https://docs.github.co
 ## License
 This project is licensed under the MIT License. See the [LICENSE](License) file for details.
 
-## Ackowledgements
+## Acknowledgements
 - [opentype.js](https://opentype.js.org)
 - Font designers whose works are used in demos
 - Open-source community for inspiration and guidance, with focus on the incredile team at [Google Fonts](https://github.com/google/fonts), which I've become a huge fan of.
