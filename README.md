@@ -93,9 +93,10 @@ Click the Reset button to return all axes and font size to default values.
 
 ## Contributing
 Contributions are welcome! You can help by:
-Reporting bugs or issues
-Suggesting features
-Submitting pull requests
+- Reporting bugs or issues
+- Suggesting features
+- Submitting pull requests
+
 Please follow the standard [GitHub pull request workflow](https://docs.github.com/en/pull-requests).
 
 ## License
