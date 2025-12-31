@@ -100,7 +100,7 @@ Contributions are welcome! You can help by:
 Please follow the standard [GitHub pull request workflow](https://docs.github.com/en/pull-requests).
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](License) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 - [opentype.js](https://opentype.js.org)
