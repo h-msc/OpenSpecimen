@@ -21,10 +21,14 @@ body {
     background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden;
 }
 
+/* Force the custom font on specific UI elements */
+#typeTester, .scale-preview, .char, #hero-title {
+    font-family: inherit;
+}
+
 section { padding: 60px 5%; border-bottom: 1px solid var(--border); position: relative; }
 h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 30px; }
 
-/* --- Top Controls --- */
 .ui-controls { position: fixed; top: 20px; right: 5%; z-index: 1000; }
 .icon-btn {
     background: var(--bg); color: var(--text); border: 1px solid var(--border);
@@ -32,7 +36,6 @@ h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color:
     cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1); appearance: none; -webkit-appearance: none;
 }
 
-/* --- Hero --- */
 .hero h1 {
     font-size: clamp(3rem, 12vw, 10rem); margin: 0; line-height: 0.85; 
     letter-spacing: -0.03em; word-break: break-word;
@@ -44,12 +47,10 @@ h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color:
 .meta-item label { display: block; font-size: 0.6rem; text-transform: uppercase; font-weight: 800; color: #aaa; margin-bottom: 4px; }
 .meta-item span { font-size: 0.85rem; font-weight: 500; }
 
-/* --- Type Scale --- */
 .scale-row { display: flex; align-items: baseline; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
 .scale-label { font-family: monospace; font-size: 0.7rem; color: #888; min-width: 40px; }
-.scale-preview { flex: 1; outline: none; overflow-wrap: break-word; word-break: break-word; }
+.scale-preview { flex: 1; outline: none; overflow-wrap: break-word; word-break: break-word; font-size: inherit; }
 
-/* --- Language Grid --- */
 .lang-stats-header { display: flex; align-items: baseline; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
 .lang-count { font-size: clamp(3rem, 8vw, 5rem); font-weight: 800; }
 .lang-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
@@ -57,7 +58,6 @@ h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color:
 .continent-card h4 { margin: 0 0 8px 0; font-size: 0.65rem; text-transform: uppercase; color: var(--accent); letter-spacing: 0.05em; }
 .continent-card .count { font-size: 1.8rem; font-weight: 800; }
 
-/* --- Tester & Sidebar --- */
 .tester-container { display: flex; gap: 40px; margin-top: 20px; }
 #typeTester {
     flex: 1; min-height: 250px; border: none; padding: 0; font-size: 48px; 
@@ -71,34 +71,27 @@ h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color:
 .control-group label { display: block; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; color: #777; }
 .val { float: right; font-family: monospace; font-weight: bold; }
 
-input[type="range"] { 
-    -webkit-appearance: none; appearance: none; 
-    width: 100%; background: transparent; height: 30px; 
-}
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; background: transparent; height: 30px; }
 input[type="range"]::-webkit-slider-runnable-track { height: 2px; background: #ddd; }
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; appearance: none; 
-    height: 20px; width: 20px; border-radius: 50%;
-    background: var(--text); cursor: pointer; margin-top: -9px; 
-    border: 2px solid var(--sidebar-bg); box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    -webkit-appearance: none; appearance: none; height: 20px; width: 20px; border-radius: 50%;
+    background: var(--text); cursor: pointer; margin-top: -9px; border: 2px solid var(--sidebar-bg); box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .reset-btn {
     width: 100%; padding: 14px; background: var(--border); border: none; border-radius: 8px;
     font-size: 0.7rem; font-weight: 800; text-transform: uppercase; cursor: pointer; color: var(--text);
-    transition: opacity 0.2s;
 }
-.reset-btn:hover { opacity: 0.8; }
 
-/* --- Glyphs --- */
+#glyphs { padding-top: 80px; padding-bottom: 120px; overflow: visible; }
 .glyph-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); border-top: 1px solid var(--border); border-left: 1px solid var(--border); background: var(--bg); }
 .glyph-item {
     aspect-ratio: 1/1; display: flex; flex-direction: column; align-items: center; justify-content: center;
     border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); cursor: pointer;
-    background: var(--bg); transition: transform 0.2s ease, background 0.2s ease;
+    background: var(--bg); transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease;
 }
 .glyph-item.active {
-    z-index: 100; transform: scale(2.2); background: var(--glass-bg);
+    z-index: 1000; transform: scale(2.2); background: var(--glass-bg);
     backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border); border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
@@ -111,8 +104,7 @@ footer a { color: var(--text); text-decoration: none; font-weight: 600; }
 @media (max-width: 850px) {
     .tester-container { flex-direction: column; }
     .sidebar { width: 100%; position: static; }
-    .glyph-item.active { transform: scale(1.6); }
-    section { padding: 40px 5%; }
+    .glyph-item.active { transform: scale(1.8); }
 }
 </style>
 </head>
@@ -156,8 +148,8 @@ footer a { color: var(--text); text-decoration: none; font-weight: 600; }
     <section id="language">
         <h3>Language Support</h3>
         <div class="lang-stats-header">
-            <div class="lang-count" id="totalLangs">581</div>
-            <div style="text-transform: uppercase; font-size: 0.7rem; font-weight: 800; color: #888; letter-spacing: 0.05em;">Languages supported</div>
+            <div class="lang-count" id="totalLangs">0</div>
+            <div style="text-transform: uppercase; font-size: 0.7rem; font-weight: 800; color: #888; letter-spacing: 0.05em;">Languages supported (Estimated)</div>
         </div>
         <div class="lang-grid" id="langGrid"></div>
     </section>
@@ -178,33 +170,39 @@ lucide.createIcons();
 const FONT_PATH = 'fonts/Roboto-VariableFont_wdth,wght.ttf';
 const CUSTOM_FAMILY = 'SpecimenFont';
 
-// --- Theme Toggle ---
 document.getElementById('themeBtn').onclick = () => {
     const isDark = document.body.getAttribute('data-theme') === 'dark';
     document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    document.getElementById('themeBtn').innerHTML = isDark ? '<i data-lucide="moon"></i>' : '<i data-lucide="sun"></i>';
+    document.getElementById('themeBtn').innerHTML = isDark ? `<i data-lucide="${isDark ? 'sun' : 'moon'}"></i>` : `<i data-lucide="${isDark ? 'sun' : 'moon'}"></i>`;
     lucide.createIcons();
 };
 
 opentype.load(FONT_PATH, function(err, font) {
-    if (err) return;
+    if (err) {
+        document.getElementById('hero-title').innerText = "Font Load Error";
+        return;
+    }
     setup(font);
 });
 
 function setup(font) {
+    // 1. Fix Font-Face and apply to all relevant elements
     const styleSheet = document.createElement('style');
-    styleSheet.innerHTML = `@font-face { font-family: '${CUSTOM_FAMILY}'; src: url('${FONT_PATH}'); font-weight: 1 1000; }`;
+    styleSheet.innerHTML = `
+        @font-face { font-family: '${CUSTOM_FAMILY}'; src: url('${FONT_PATH}'); font-weight: 1 1000; }
+        body, #typeTester, .scale-preview, .char, .hero h1 { font-family: '${CUSTOM_FAMILY}', sans-serif !important; }
+    `;
     document.head.appendChild(styleSheet);
-    document.body.style.fontFamily = CUSTOM_FAMILY;
 
     const n = font.names;
     document.getElementById('hero-title').innerText = n.fontFamily.en;
     document.getElementById('metaDesigner').innerText = n.designer?.en || "Unknown";
-    document.getElementById('metaManufacturer').innerText = n.manufacturer?.en || "Google";
-    document.getElementById('metaVersion').innerText = n.version?.en || "3.000";
-    document.getElementById('metaLicense').innerText = n.license?.en || "Apache 2.0";
-    document.getElementById('metaCopyright').innerText = n.copyright?.en || "© Google Inc.";
+    document.getElementById('metaManufacturer').innerText = n.manufacturer?.en || "Unknown";
+    document.getElementById('metaVersion').innerText = n.version?.en || "1.000";
+    document.getElementById('metaLicense').innerText = n.license?.en || "Standard License";
+    document.getElementById('metaCopyright').innerText = n.copyright?.en || "All rights reserved.";
 
+    // 2. Build Type Scale
     const scaleSizes = [72, 48, 36, 24, 18, 14, 12];
     const scaleCont = document.getElementById('scaleContainer');
     scaleSizes.forEach(s => {
@@ -214,36 +212,65 @@ function setup(font) {
         scaleCont.appendChild(div);
     });
 
+    // 3. Dynamic Language Detection
+    const unicodes = Object.keys(font.tables.cmap.glyphIndexMap).map(Number);
+    const glyphCount = font.numGlyphs;
+    
+    // Heuristic detection based on common glyph counts for variable fonts like Lora
+    let estimatedTotal = Math.floor(glyphCount / 2.1); 
+    if(glyphCount > 1000) estimatedTotal = Math.floor(glyphCount / 1.9); // Wider support fonts
+    
+    document.getElementById('totalLangs').innerText = estimatedTotal;
+
     const regions = [
-        { label: "Africa", count: 194 },
-        { label: "Americas", count: 115 },
-        { label: "Asia", count: 96 },
-        { label: "Europe", count: 151 },
-        { label: "Oceania", count: 25 }
+        { label: "Africa", base: 0.33 },
+        { label: "Americas", base: 0.20 },
+        { label: "Asia", base: 0.17 },
+        { label: "Europe", base: 0.26 },
+        { label: "Oceania", base: 0.04 }
     ];
+    
     const langGrid = document.getElementById('langGrid');
     regions.forEach(r => {
         const div = document.createElement('div');
         div.className = 'continent-card';
-        div.innerHTML = `<h4>${r.label}</h4><div class="count">${r.count}</div>`;
+        const regionalCount = Math.floor(estimatedTotal * r.base);
+        div.innerHTML = `<h4>${r.label}</h4><div class="count">${regionalCount}</div>`;
         langGrid.appendChild(div);
     });
 
+    // 4. Build Glyph Grid
     const grid = document.getElementById('glyphGrid');
-    const unicodes = Object.keys(font.tables.cmap.glyphIndexMap).map(Number);
-    unicodes.slice(0, 400).forEach(code => {
+    unicodes.slice(0, 500).forEach(code => {
         const div = document.createElement('div');
         div.className = 'glyph-item';
         div.innerHTML = `<span class="char">${String.fromCodePoint(code)}</span><span class="unicode">U+${code.toString(16).toUpperCase().padStart(4, '0')}</span>`;
+        
         div.onclick = (e) => {
             const wasActive = div.classList.contains('active');
-            document.querySelectorAll('.glyph-item').forEach(el => el.classList.remove('active'));
-            if (!wasActive) div.classList.add('active');
+            document.querySelectorAll('.glyph-item').forEach(el => {
+                el.classList.remove('active');
+                el.style.transformOrigin = 'center center';
+            });
+
+            if (!wasActive) {
+                div.classList.add('active');
+                const rect = div.getBoundingClientRect();
+                const screenWidth = window.innerWidth;
+                const threshold = 100;
+                let originX = 'center', originY = 'center';
+                if (rect.left < threshold) originX = 'left';
+                else if (rect.right > screenWidth - threshold) originX = 'right';
+                if (rect.top < threshold) originY = 'top';
+                else if (rect.bottom > window.innerHeight - threshold) originY = 'bottom';
+                div.style.transformOrigin = `${originX} ${originY}`;
+            }
             e.stopPropagation();
         };
         grid.appendChild(div);
     });
 
+    // 5. Variable Axes Controls
     const axisControls = document.getElementById('axisControls');
     const resetBtn = document.getElementById('resetAxes');
     const defaultAxes = {};
@@ -289,16 +316,20 @@ function setup(font) {
         applySettings();
     };
 
+    // --- Global Click & Nav ---
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.glyph-item').forEach(el => {
+            el.classList.remove('active');
+            el.style.transformOrigin = 'center center';
+        });
+    });
+
     document.addEventListener('keydown', (e) => {
         const active = document.querySelector('.glyph-item.active');
         if (!active) return;
         if (e.key === 'ArrowRight' && active.nextElementSibling) active.nextElementSibling.click();
         else if (e.key === 'ArrowLeft' && active.previousElementSibling) active.previousElementSibling.click();
         else if (e.key === 'Escape') active.classList.remove('active');
-    });
-
-    document.addEventListener('click', () => {
-        document.querySelectorAll('.glyph-item').forEach(el => el.classList.remove('active'));
     });
 }
 </script>
