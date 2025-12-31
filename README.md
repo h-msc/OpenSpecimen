@@ -1,8 +1,8 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
-[![Demo](https://img.shields.io/badge/demo-live-blue)](https://h-msc.github.io/OpenSpecimen/)
+[![Demo](https://img.shields.io/badge/demo-live-blue)](https://HugoMSC.github.io/OpenSpecimen/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/h-msc/OpenSpecimen)](https://github.com/h-msc/OpenSpecimen/releases)
-[![GitHub stars](https://img.shields.io/github/stars/h-msc/OpenSpecimen)](https://github.com/h-msc/OpenSpecimen/stargazers)
+[![Release](https://img.shields.io/github/v/release/HugoMSC/OpenSpecimen)](https://github.com/HugoMSC/OpenSpecimen/releases)
+[![GitHub stars](https://img.shields.io/github/stars/HugoMSC/OpenSpecimen)](https://github.com/HugoMSC/OpenSpecimen/stargazers)
 ![HTML](https://img.shields.io/badge/html-vanilla-orange)
 ![CSS](https://img.shields.io/badge/css-modern-blue)
 ![JavaScript](https://img.shields.io/badge/javascript-vanilla-yellow)
@@ -43,7 +43,7 @@ Disclaimer: I'm not a programmer. This project was developed with significant co
 
 ## Demo
 
-Check out the live demo here: [OpenSpecimen Demo](https://h-msc.github.io/OpenSpecimen/)
+Check out the live demo here: [OpenSpecimen Demo](https:/HugoMSC.github.io/OpenSpecimen/)
 
 <img width="6300" height="13929" alt="OpenSpecimen" src="https://github.com/user-attachments/assets/4f4d1061-9f4a-4818-a42e-c030b3f6c1cd" />
 
@@ -73,14 +73,14 @@ git clone https://github.com/h-msc/OpenSpecimen.git
 No additional dependencies are required; everything runs in-browser using [opentype.js](https://opentype.js.org)
 
 ## Usage
-1. Type Tester
-Type any text in the interactive textarea to see it rendered in your chosen font.
-2. Axis Sliders
-Adjust variable font axes (weight, width, etc.) using the sidebar sliders. The live preview updates in real time.
-3. Glyph Grid
-Click any glyph to zoom in and see its Unicode codepoint. Use arrow keys to navigate between glyphs.
-4. Reset Axes
-Click the Reset button to return all axes and font size to default values.
+1. Type Tester - Type any text in the interactive textarea to see it rendered in your chosen font.
+   
+3. Axis Sliders - Adjust variable font axes (weight, width, etc.) using the sidebar sliders. The live preview updates in real time.
+
+3. Glyph Grid - Click any glyph to zoom in and see its Unicode codepoint. Use arrow keys to navigate between glyphs.
+
+5. Reset Axes - Click the Reset button to return all axes and font size to default values.
+   
 5. Custom Fonts
    
    5.1. Replace **Roboto-VariableFont_wdth,wght.ttf** in the **fonts/** folder with your font to showcase it.
@@ -105,7 +105,7 @@ This project is licensed under the MIT License. See the [LICENSE](License) file 
 ## Acknowledgements
 - [opentype.js](https://opentype.js.org)
 - Font designers whose works are used in demos
-- Open-source community for inspiration and guidance, with focus on the incredile team at [Google Fonts](https://github.com/google/fonts), which I've become a huge fan of.
+- Open-source community for inspiration and guidance, with focus on the incredible team at [Google Fonts](https://github.com/google/fonts), which I've become a huge fan of.
 
 ---
 Thank you for exploring OpenSpecimen! Contributions and feedback are always welcome.
